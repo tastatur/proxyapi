@@ -1,11 +1,21 @@
 # proxyapi
-Proxy-API für den Stanbol
+Client-API für Stanbol, die dem Entwickler eine einfache Schnitstelle für die Anreicherung der SUchergebnissen 
+zur Verfügung stellt.
 
-* *Server* wird benutzt, um die Verbindung zum Stanbol aufzubauen. Dabei sollen Serveraddresse und Enginename übergeben werden
+## Kurze Einleitung
+Um diese Bibliothek in deinem Projekt benutzen zu können, muss du die entsprechende mvn-Abhängigkeit 
+ in dein Projekthinzufügen:
 
-* *Request* wird benutzt, um die Anfrage zu senden. *Request* beinhaltet die Liste von Tupels *(URL,Abstract)*. 
-*URL* ist die Addresse der gefundenen Webseite, und *Abstract* ist der Text des Snipplets.
+```
+<dependency>
+    <groupId>de.unidue</groupId>
+    <artifactId>proxyapi</artifactId>
+</dependency>
+```
 
-* Als Ausgabewert bekommt man das Object *Answer*, der die Liste von Tupels *(URL, List<Ontology>)* beinhaltet.
-*URL* ist die entsprechende URL der gefundenen Webseite (so wird der Entwickler die Ontologien später anordnen könnte),
-und *List<Ontology>* ist die Liste von gefundenen Ontologien
+* Um die Verbindung zum Stanbol aufzubauen, muss man eine Instanz von _EnhancementClient_ erzeugen.
+* Um die Suchergebnisse (die man z.B. vom Bing kriegt), muss man eine Map von URL der gefundenen Webseite auf den Text desd Snippets
+an den _EnhancementClient_ übergeben.
+* In der Auflistung _EnhancementEngine_ findet man die Liste von verfügbaren Engine-Ketten.
+* Als Antwort liefert die Bibliothek einen _EnhancementResult_, wo jeder Webseite eine Liste von _Ontologien_ zugewiesen wird.
+* Das Beispiel findest du in dem Package ``de.unidue.proxyapi.examples``
