@@ -8,8 +8,9 @@ import de.unidue.proxyapi.util.EnhancementEngine;
 import org.apache.http.Header;
 import org.apache.http.HttpEntity;
 import org.apache.http.client.methods.CloseableHttpResponse;
-import org.apache.http.client.methods.HttpPut;
+import org.apache.http.client.methods.HttpPost;
 import org.apache.http.client.protocol.HttpClientContext;
+import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.impl.conn.PoolingHttpClientConnectionManager;
@@ -18,6 +19,7 @@ import org.apache.http.protocol.HttpContext;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -52,7 +54,7 @@ public final class StanbolClient implements EnhancementClient {
 
     private List<Header> getDefaultStanbolRequestHeaders() {
         final List<Header> defaultRequestHeaders = new ArrayList<>();
-        defaultRequestHeaders.add(new BasicHeader("Accept", "text/turtle"));
+        defaultRequestHeaders.add(new BasicHeader("Accept", "application/rdf+xml"));
         defaultRequestHeaders.add(new BasicHeader("Content-type", "text/plain"));
         return defaultRequestHeaders;
     }
@@ -65,13 +67,13 @@ public final class StanbolClient implements EnhancementClient {
     @Override
     public Map<String, List<Entity>> getEntitiesForSnippets(final Map<String, String> snippets, final EnhancementEngine engine) {
         return snippets.entrySet().parallelStream()
-                .collect(Collectors.toMap(Map.Entry::getKey, searchEntry -> getEntitiesForSnippet(searchEntry.getValue(),  engine)));
+                .collect(Collectors.toMap(Map.Entry::getKey, searchEntry -> getEntitiesForSnippet(searchEntry.getValue(), engine)));
     }
 
     private List<Entity> getEntitiesForSnippet(final String snippet, final EnhancementEngine engine) {
         List<Entity> foundEntities = null;
         final HttpContext httpContext = HttpClientContext.create();
-        final HttpPut enhancementRequest = new HttpPut(this.baseUrl.concat(engine.toString()));
+        final HttpPost enhancementRequest = generatePostRequest(snippet, engine);
         try (CloseableHttpResponse stanbolResponse = this.httpClient.execute(enhancementRequest, httpContext)) {
             HttpEntity responseBody = stanbolResponse.getEntity();
             foundEntities = convertRawStanbolAnswer(responseBody.getContent());
@@ -82,9 +84,20 @@ public final class StanbolClient implements EnhancementClient {
         return foundEntities;
     }
 
+    private HttpPost generatePostRequest(final String snippet, final EnhancementEngine engine) {
+        final HttpPost enhancementRequest = new HttpPost(this.baseUrl.concat(engine.toString()));
+        try {
+            enhancementRequest.setEntity(new StringEntity(snippet));
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+            getLogger().error("Kann die Suchergebnisse nicht anreichern!", e);
+        }
+        return enhancementRequest;
+    }
+
     private List<Entity> convertRawStanbolAnswer(final InputStream content) {
         final Model rawResponseModel = ModelFactory.createDefaultModel();
         rawResponseModel.read(content, null);
-        return null;
+        return new ArrayList<>();
     }
 }
