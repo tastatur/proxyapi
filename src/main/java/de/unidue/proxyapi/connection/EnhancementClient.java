@@ -1,6 +1,6 @@
 package de.unidue.proxyapi.connection;
 
-import de.unidue.proxyapi.data.ontology.Ontology;
+import de.unidue.proxyapi.data.entities.Entity;
 import de.unidue.proxyapi.util.EnhancementEngine;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -20,7 +20,7 @@ public interface EnhancementClient {
      * @param snippets Suchsnippets, wo nach Entitäten gesuchgt werden soll (Eine Map von URL der Webseite auf den Text des Snippets)
      * @return Gefundene Ontologien (Map von URL der Webseite zu den auf der seite gefundenen Ontologien)
      */
-    Map<String, List<Ontology>> getOntologysForSnippets(final Map<String, String> snippets);
+    Map<String, List<Entity>> getEntitiesForSnippets(final Map<String, String> snippets);
 
     /**
      * Suche nach Ontologien in den Suchsnippets
@@ -29,5 +29,5 @@ public interface EnhancementClient {
      * @param engine   Die Enginekette, die verwendet werden soll
      * @return Gefundene Ontologien (Map von URL der Webseite zu den auf der seite gefundenen Ontologien)
      */
-    Map<String, List<Ontology>> getOntologysForSnippets(final Map<String, String> snippets, final EnhancementEngine engine);
+    Map<String, List<Entity>> getEntitiesForSnippets(final Map<String, String> snippets, final EnhancementEngine engine);
 }

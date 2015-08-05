@@ -1,6 +1,6 @@
-package de.unidue.proxyapi.data.ontology;
+package de.unidue.proxyapi.data.entities;
 
-public class Person extends Ontology {
+public class Person extends Entity {
 
     public String getBirthDate() {
         return this.getPropertyByName("birthDate").getValue();

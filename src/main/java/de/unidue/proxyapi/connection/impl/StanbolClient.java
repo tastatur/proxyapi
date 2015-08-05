@@ -3,7 +3,7 @@ package de.unidue.proxyapi.connection.impl;
 import com.hp.hpl.jena.rdf.model.Model;
 import com.hp.hpl.jena.rdf.model.ModelFactory;
 import de.unidue.proxyapi.connection.EnhancementClient;
-import de.unidue.proxyapi.data.ontology.Ontology;
+import de.unidue.proxyapi.data.entities.Entity;
 import de.unidue.proxyapi.util.EnhancementEngine;
 import org.apache.http.Header;
 import org.apache.http.HttpEntity;
@@ -23,7 +23,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-public class StanbolClient implements EnhancementClient {
+public final class StanbolClient implements EnhancementClient {
 
     private static final String STANBOL_ADDRESS_PROP = "de.unidue.stanbol.address";
     private static StanbolClient instance;
@@ -58,18 +58,18 @@ public class StanbolClient implements EnhancementClient {
     }
 
     @Override
-    public Map<String, List<Ontology>> getOntologysForSnippets(final Map<String, String> snippets) {
-        return getOntologysForSnippets(snippets, EnhancementEngine.STANFORD);
+    public Map<String, List<Entity>> getEntitiesForSnippets(final Map<String, String> snippets) {
+        return getEntitiesForSnippets(snippets, EnhancementEngine.STANFORD);
     }
 
     @Override
-    public Map<String, List<Ontology>> getOntologysForSnippets(final Map<String, String> snippets, final EnhancementEngine engine) {
+    public Map<String, List<Entity>> getEntitiesForSnippets(final Map<String, String> snippets, final EnhancementEngine engine) {
         return snippets.entrySet().parallelStream()
                 .collect(Collectors.toMap(Map.Entry::getKey, searchEntry -> getEntitiesForSnippet(searchEntry.getValue(),  engine)));
     }
 
-    private List<Ontology> getEntitiesForSnippet(final String snippet, final EnhancementEngine engine) {
-        List<Ontology> foundEntities = null;
+    private List<Entity> getEntitiesForSnippet(final String snippet, final EnhancementEngine engine) {
+        List<Entity> foundEntities = null;
         final HttpContext httpContext = HttpClientContext.create();
         final HttpPut enhancementRequest = new HttpPut(this.baseUrl.concat(engine.toString()));
         try (CloseableHttpResponse stanbolResponse = this.httpClient.execute(enhancementRequest, httpContext)) {
@@ -77,12 +77,12 @@ public class StanbolClient implements EnhancementClient {
             foundEntities = convertRawStanbolAnswer(responseBody.getContent());
         } catch (IOException e) {
             e.printStackTrace();
-            getLogger().error("Kann die SUchergebnisse nicht anreichern!", e);
+            getLogger().error("Kann die Suchergebnisse nicht anreichern!", e);
         }
         return foundEntities;
     }
 
-    private List<Ontology> convertRawStanbolAnswer(final InputStream content) {
+    private List<Entity> convertRawStanbolAnswer(final InputStream content) {
         final Model rawResponseModel = ModelFactory.createDefaultModel();
         rawResponseModel.read(content, null);
         return null;

@@ -1,4 +1,4 @@
-package de.unidue.proxyapi.data.ontology;
+package de.unidue.proxyapi.data.entities;
 
 /**
  * Diese Klasse repräsentiert eine Eigenschaft der Ontologie (z.B. Todestadum oder PLZ)
