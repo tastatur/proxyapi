@@ -30,4 +30,10 @@ public interface EnhancementClient {
      * @return Gefundene Ontologien (Map von URL der Webseite zu den auf der seite gefundenen Ontologien)
      */
     Map<String, List<Entity>> getEntitiesForSnippets(final Map<String, String> snippets, final EnhancementEngine engine);
+
+    /**
+     * Filtere die Snippets raus, für die gar keine Entitäten gefunden wurden
+     * @return
+     */
+    Map<String, List<Entity>> filterEmptyResults(final Map<String, List<Entity>> enhancementResults);
 }

@@ -24,7 +24,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-public final class StanbolClient implements EnhancementClient {
+public final class StanbolClient extends AbstractEnhancementClient {
 
     private static final String STANBOL_ADDRESS_PROP = "de.unidue.stanbol.address";
     private static StanbolClient instance;
