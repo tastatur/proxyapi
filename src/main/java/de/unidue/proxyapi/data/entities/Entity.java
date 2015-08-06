@@ -3,6 +3,7 @@ package de.unidue.proxyapi.data.entities;
 import com.hp.hpl.jena.rdf.model.Literal;
 import com.hp.hpl.jena.rdf.model.Property;
 import com.hp.hpl.jena.rdf.model.Resource;
+import com.hp.hpl.jena.rdf.model.ResourceFactory;
 import com.hp.hpl.jena.vocabulary.RDF;
 import de.unidue.proxyapi.data.vocabulary.EnhancementResultVocabulary;
 import de.unidue.proxyapi.util.impl.AllInteressantPropsFilter;
@@ -30,7 +31,10 @@ public class Entity {
     }
 
     public Literal getSingleEntityPropValue(final Property property) {
-        return internalRepresentation.getProperty(property).getLiteral();
+        if (internalRepresentation.hasProperty(property)) {
+            return internalRepresentation.getProperty(property).getLiteral();
+        }
+        return ResourceFactory.createPlainLiteral("");
     }
 
     public String getSingleEntityPropValueAsString(final Property property) {
