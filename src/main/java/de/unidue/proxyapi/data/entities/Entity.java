@@ -1,31 +1,57 @@
 package de.unidue.proxyapi.data.entities;
 
-import sun.reflect.generics.reflectiveObjects.NotImplementedException;
+import com.hp.hpl.jena.rdf.model.Literal;
+import com.hp.hpl.jena.rdf.model.Property;
+import com.hp.hpl.jena.rdf.model.Resource;
+import com.hp.hpl.jena.vocabulary.RDF;
+import de.unidue.proxyapi.data.vocabulary.EnhancementResultVocabulary;
+import de.unidue.proxyapi.util.impl.AllInteressantPropsFilter;
+import de.unidue.proxyapi.util.impl.ExtractPropertyFromStatement;
 
-import java.util.Collection;
-import java.util.HashMap;
+import java.util.List;
 
 /**
  * Die Basisklasse, die die Entitäten, die zu keiner anderer Klasse passen, darstellt
- * Properties ist ein Map<URI, Property>, wo URI die interne URI des Properties ist (soll nur intern verwendet werden)
  */
-public class Entity extends HashMap<String, Property> {
+public class Entity {
 
-    public static final String DBPEDIA_BASE_URL = "http://dbpedia.org/ontology/";
+    private final Resource internalRepresentation;
 
-    public Collection<Property> getAllProperties() {
-        return this.values();
+    public Entity(final Resource internalRepresentation) {
+        this.internalRepresentation = internalRepresentation;
     }
 
-    public Property getPropertyByUri(String uri) {
-        return this.get(uri);
+    public List<EntityProperty> getAllProperties() {
+        return internalRepresentation.listProperties().filterKeep(new AllInteressantPropsFilter()).mapWith(new ExtractPropertyFromStatement()).toList();
     }
 
-    public Property getPropertyByName(String name) {
-        return this.getPropertyByUri(DBPEDIA_BASE_URL.concat(name));
+    public List<String> getEntityTypes() {
+        return internalRepresentation.listProperties(RDF.type).mapWith(entityTypeArc -> entityTypeArc.getLiteral().getString()).toList();
     }
 
-    public String getEntityType() {
-        throw new NotImplementedException();
+    public Literal getSingleEntityPropValue(final Property property) {
+        return internalRepresentation.getProperty(property).getLiteral();
+    }
+
+    public String getSingleEntityPropValueAsString(final Property property) {
+        return getSingleEntityPropValue(property).getString();
+    }
+
+    public String getUri() {
+        return internalRepresentation.getURI();
+    }
+
+    public String getAbstract() {
+        return getSingleEntityPropValueAsString(EnhancementResultVocabulary.ABSTRACT);
+    }
+
+    @Override
+    public boolean equals(Object object) {
+        return object instanceof Entity && internalRepresentation.getURI().equals(((Entity) object).internalRepresentation.getURI());
+    }
+
+    @Override
+    public int hashCode() {
+        return internalRepresentation.getURI().hashCode();
     }
 }

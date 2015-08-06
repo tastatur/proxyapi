@@ -3,13 +3,14 @@ package de.unidue.proxyapi.data.entities;
 /**
  * Diese Klasse repräsentiert eine Eigenschaft der Ontologie (z.B. Todestadum oder PLZ)
  */
-public class Property {
+public class EntityProperty {
 
     private String name;
     private String uri;
     private String lang;
     private String value;
     private String typeUri;
+    private Boolean externalResourceLink = false;
 
     public String getName() {
         return name;
@@ -49,5 +50,13 @@ public class Property {
 
     public void setTypeUri(String typeUri) {
         this.typeUri = typeUri;
+    }
+
+    public Boolean getExternalResourceLink() {
+        return externalResourceLink;
+    }
+
+    public void setExternalResourceLink(Boolean externalResourceLink) {
+        this.externalResourceLink = externalResourceLink;
     }
 }

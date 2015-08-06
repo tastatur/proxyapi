@@ -1,0 +1,213 @@
+<rdf:RDF
+        xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        xmlns:j.0="http://www.opengis.net/gml/"
+        xmlns:j.1="http://www.w3.org/2003/01/geo/wgs84_pos#"
+        xmlns:j.2="http://dbpedia.org/ontology/"
+        xmlns:j.3="http://schema.org/"
+        xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+        xmlns:j.4="http://stanbol.apache.org/ontology/entityhub/entityhub#"
+        xmlns:j.5="http://purl.org/dc/terms/"
+        xmlns:j.6="http://dbpedia.org/ontology/Wikidata:"
+        xmlns:j.7="http://dbpedia.org/ontology/PopulatedPlace/"
+        xmlns:j.8="http://www.w3.org/2004/02/skos/core#"
+        xmlns:j.9="http://www.ontologydesignpatterns.org/ont/d0.owl#"
+        xmlns:j.10="http://fise.iks-project.eu/ontology/" >
+    <rdf:Description rdf:about="http://de.dbpedia.org/resource/Deutschland">
+        <j.7:areaTotal rdf:datatype="http://www.w3.org/2001/XMLSchema#string">357167.94</j.7:areaTotal>
+        <j.7:populationDensity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">226.0</j.7:populationDensity>
+        <j.2:abstract xml:lang="de">12px Deutschland?/i (Vollform Bundesrepublik Deutschland) ist ein bundesstaatlich verfasstes Land in Mitteleuropa, das aus den 16 deutschen Ländern gebildet wird. Die Bundesrepublik ist ein freiheitlich-demokratischer und sozialer Rechtsstaat und stellt die jüngste Ausprägung des deutschen Nationalstaates dar. Bundeshauptstadt ist Berlin.An Deutschland grenzen neun Nachbarländer und naturräumlich im Norden die Gewässer der Nord- und Ostsee, im Süden das Bergland der Alpen. Es liegt in der gemäßigten Klimazone, zählt mit rund 80 Millionen Einwohnern zu den dicht besiedelten Flächenstaaten und gilt international als das Land mit der dritthöchsten Zahl von Einwanderern.Deutschland ist Gründungsmitglied der Europäischen Union sowie deren bevölkerungsreichstes Land und bildet mit 17 anderen EU-Mitgliedstaaten eine Währungsunion, die Eurozone. Es ist Mitglied der UNO, der OECD, der NATO, der G7 und der G20. Die Bundesrepublik gilt als politisch einflussreicher Staat in Europa und ist ein gesuchtes Partnerland auf globaler Ebene.Gemessen am nominalen Bruttoinlandsprodukt ist Deutschland die größte Volkswirtschaft Europas und viertgrößte der Welt. Im Jahr 2012 war es die drittgrößte Export- und Importnation. Der Index für menschliche Entwicklung zählt Deutschland zu den sehr hoch entwickelten Ländern.↑ § 23 Absatz 1 Verwaltungsverfahrensgesetz (Bund).Die Frage, ob unter deutsch rechtlich ausschließlich die hochdeutsche oder auch die niederdeutsche Sprache subsumiert wird, wird juristisch uneinheitlich beantwortet: Während der BGH in einer Entscheidung zu Gebrauchsmustereinreichung beim Deutschen Patent- und Markenamt in plattdeutscher Sprache das Niederdeutsche einer Fremdsprache gleichstellt („Niederdeutsche (plattdeutsche) Anmeldeunterlagen sind im Sinn des § 4a Abs. 1 Satz 1 GebrMG nicht in deutscher Sprache abgefaßt.“ – BGH-Beschluss vom 19. November 2002, Az. X ZB 23/01), ist nach dem Kommentar von Foerster/Friedersen/Rohde zu § 82a des Landesverwaltungsgesetzes Schleswig-Holstein unter Verweis auf Entscheidungen höherer Gerichte zu § 184 des Gerichtsverfassungsgesetzes seit 1927 (OLG Oldenburg, 10. Oktober 1927 – K 48, HRR 1928, 392) unter dem Begriff deutsche Sprache sowohl Hochdeutsch wie auch Niederdeutsch zu verstehen.↑ Statistische Ämter des Bundes und der Länder: Gebiet und Bevölkerung – Fläche und Bevölkerung, Stand: 4. Februar 2014. Abgerufen am 27. Februar 2014.↑ Bevölkerung – Deutschland. Statistische Ämter des Bundes und der Länder, 25. Juni 2014, abgerufen am 26. Juni 2014. ↑ Bevölkerungsdichte ungerundet: 80.715.982 Einwohner/357.167,94 km² = 225,99 Einwohner pro km². Berechnet am 19. März 2014.↑ Statistisches Bundesamt: 80,5 Millionen Einwohner am Jahresende 2012 – Bevölkerungszunahme durch hohe Zuwanderung, Pressemitteilung Nr. 283 vom 27. August 2013. Abgerufen am 4. November 2013.↑ ↑ Human Development Report Office: Germany – Country Profile: Human Development Indicators. Abgerufen am 16. März 2013.↑ Entscheidung des Bundesverfassungsgerichts zum Grundlagenvertrag (Urteil vom 31. Juli 1973, Absatz-Nr. 54 – 2 BvF 1/73 – BVerfGE 36, S. 1 ff.: „[…] Mit der Errichtung der Bundesrepublik Deutschland wurde nicht ein neuer westdeutscher Staat gegründet, sondern ein Teil Deutschlands neu organisiert. […]“)↑ Bundeszentrale für politische Bildung: Grundlagen. Abgerufen am 7. Mai 2013.↑ Zum ordnungspolitischen Nationalstaatsbegriff siehe statt aller mit weiteren Nachweisen Hans F. Zacher, Sozialer Einschluß und Ausschluß im Zeichen von Nationalisierung und Internationalisierung, in: Hans Günter Hockerts (Hrsg.): Koordinaten deutscher Geschichte in der Epoche des Ost-West-Konflikts, Oldenbourg, München 2004 (Schriften des Historischen Kollegs: Kolloquien; 55), ISBN 3-486-56768-3, S. 103–152, hier S. 105 f., 141: Die Konstituierung der Bundesrepublik Deutschland als Nationalstaat, aber „nur unter Inkaufnahme von Widersprüchen“, sowie der Charakter des vereinigten Deutschland als Nationalstaat.↑ UN Department of Economic and Social Affairs: International Migration 2006 (PDF; 619 kB), Stand: 2006. Abgerufen am 31. Mai 2013.↑ Hans Kundnani: Germany as a Geo-economic Power (PDF; 267 kB), Center for Strategic and International Studies, 2011. Abgerufen am 20. Juni 2013.↑ ↑</j.2:abstract>
+        <j.2:anthem rdf:resource="http://de.dbpedia.org/resource/Deutsche_Nationalhymne"/>
+        <j.2:areaCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">+49</j.2:areaCode>
+        <j.2:areaTotal rdf:datatype="http://www.w3.org/2001/XMLSchema#double">3.5716794E11</j.2:areaTotal>
+        <j.2:capital rdf:resource="http://de.dbpedia.org/resource/Berlin"/>
+        <j.2:censusYear rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2012-12-31T23:00:00Z</j.2:censusYear>
+        <j.2:currency rdf:resource="http://de.dbpedia.org/resource/Euro"/>
+        <j.2:individualisedGnd rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4011882-4</j.2:individualisedGnd>
+        <j.2:officialLanguage rdf:resource="http://de.dbpedia.org/resource/Deutsche_Sprache"/>
+        <j.2:officialLanguage rdf:resource="http://de.dbpedia.org/resource/Regional-_und_Minderheitensprachen_in_Europa"/>
+        <j.2:populationAsOf rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2013-09-29T22:00:00Z</j.2:populationAsOf>
+        <j.2:populationDensity rdf:datatype="http://www.w3.org/2001/XMLSchema#double">226.0</j.2:populationDensity>
+        <j.2:populationTotal rdf:datatype="http://www.w3.org/2001/XMLSchema#int">80716000</j.2:populationTotal>
+        <j.2:populationTotal rdf:datatype="http://www.w3.org/2001/XMLSchema#long">80716000</j.2:populationTotal>
+        <j.2:region rdf:resource="http://de.dbpedia.org/resource/ISO_3166-2:DE"/>
+        <j.2:timeZone rdf:resource="http://de.dbpedia.org/resource/UTC+1"/>
+        <j.2:timeZone rdf:resource="http://de.dbpedia.org/resource/UTC+2"/>
+        <j.2:topLevelDomain rdf:datatype="http://www.w3.org/2001/XMLSchema#string">.de</j.2:topLevelDomain>
+        <j.2:vehicleCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">D</j.2:vehicleCode>
+        <j.5:subject rdf:resource="http://de.dbpedia.org/resource/Kategorie:Deutschland"/>
+        <j.5:subject rdf:resource="http://de.dbpedia.org/resource/Kategorie:Gruppe_der_Acht"/>
+        <j.5:subject rdf:resource="http://de.dbpedia.org/resource/Kategorie:Mitglied_des_Europarats"/>
+        <j.5:subject rdf:resource="http://de.dbpedia.org/resource/Kategorie:Mitgliedstaat_der_Europäischen_Union"/>
+        <j.5:subject rdf:resource="http://de.dbpedia.org/resource/Kategorie:Mitgliedstaat_der_OECD"/>
+        <j.5:subject rdf:resource="http://de.dbpedia.org/resource/Kategorie:Mitgliedstaat_der_Vereinten_Nationen"/>
+        <j.5:subject rdf:resource="http://de.dbpedia.org/resource/Kategorie:Parlamentarische_Bundesrepublik_(Staat)"/>
+        <j.5:subject rdf:resource="http://de.dbpedia.org/resource/Kategorie:Staat_in_Europa"/>
+        <j.4:entityRank rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.87943506</j.4:entityRank>
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Country"/>
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Place"/>
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/PopulatedPlace"/>
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Wikidata:Q532"/>
+        <rdf:type rdf:resource="http://schema.org/Country"/>
+        <rdf:type rdf:resource="http://schema.org/Place"/>
+        <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/d0.owl#Location"/>
+        <rdf:type rdf:resource="http://www.opengis.net/gml/_Feature"/>
+        <rdfs:label xml:lang="de">Deutschland</rdfs:label>
+        <j.1:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#double">51.165</j.1:lat>
+        <j.1:long rdf:datatype="http://www.w3.org/2001/XMLSchema#double">10.455277</j.1:long>
+        <j.8:subject rdf:resource="http://de.dbpedia.org/resource/Kategorie:Deutschland"/>
+        <j.8:subject rdf:resource="http://de.dbpedia.org/resource/Kategorie:Gruppe_der_Acht"/>
+        <j.8:subject rdf:resource="http://de.dbpedia.org/resource/Kategorie:Mitglied_des_Europarats"/>
+        <j.8:subject rdf:resource="http://de.dbpedia.org/resource/Kategorie:Mitgliedstaat_der_Europäischen_Union"/>
+        <j.8:subject rdf:resource="http://de.dbpedia.org/resource/Kategorie:Mitgliedstaat_der_OECD"/>
+        <j.8:subject rdf:resource="http://de.dbpedia.org/resource/Kategorie:Mitgliedstaat_der_Vereinten_Nationen"/>
+        <j.8:subject rdf:resource="http://de.dbpedia.org/resource/Kategorie:Parlamentarische_Bundesrepublik_(Staat)"/>
+        <j.8:subject rdf:resource="http://de.dbpedia.org/resource/Kategorie:Staat_in_Europa"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:enhancement-1fab32f9-81f1-9e10-b5d8-83c1f62401e2">
+        <j.10:confidence rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.3347826238224238</j.10:confidence>
+        <j.10:entity-label xml:lang="de">Vereinigtes Deutschland</j.10:entity-label>
+        <j.10:entity-reference rdf:resource="http://de.dbpedia.org/resource/Vereinigtes_Deutschland"/>
+        <j.10:extracted-from rdf:resource="urn:content-item-sha1-223476fd31a6ec63a204237d220457292e09cb78"/>
+        <j.5:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2015-08-05T18:37:58.406Z</j.5:created>
+        <j.5:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">org.apache.stanbol.enhancer.engines.entitytagging.impl.NamedEntityTaggingEngine</j.5:creator>
+        <j.5:relation rdf:resource="urn:enhancement-28cede35-405a-8f07-e988-155ba1eb7919"/>
+        <j.4:site>dedbpedia</j.4:site>
+        <rdf:type rdf:resource="http://fise.iks-project.eu/ontology/Enhancement"/>
+        <rdf:type rdf:resource="http://fise.iks-project.eu/ontology/EntityAnnotation"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:enhancement-814693cb-1906-b5f4-0ae5-5a5392885dad">
+        <j.10:confidence rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.36666666666666675</j.10:confidence>
+        <j.10:entity-label xml:lang="de">FDP Deutschland</j.10:entity-label>
+        <j.10:entity-reference rdf:resource="http://de.dbpedia.org/resource/FDP_Deutschland"/>
+        <j.10:extracted-from rdf:resource="urn:content-item-sha1-223476fd31a6ec63a204237d220457292e09cb78"/>
+        <j.5:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2015-08-05T18:37:58.406Z</j.5:created>
+        <j.5:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">org.apache.stanbol.enhancer.engines.entitytagging.impl.NamedEntityTaggingEngine</j.5:creator>
+        <j.5:relation rdf:resource="urn:enhancement-28cede35-405a-8f07-e988-155ba1eb7919"/>
+        <j.4:site>dedbpedia</j.4:site>
+        <rdf:type rdf:resource="http://fise.iks-project.eu/ontology/Enhancement"/>
+        <rdf:type rdf:resource="http://fise.iks-project.eu/ontology/EntityAnnotation"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://de.dbpedia.org/resource/Vereinigtes_Deutschland">
+        <j.2:wikiPageRedirects rdf:resource="http://de.dbpedia.org/resource/Deutschland"/>
+        <j.4:entityRank rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.87943506</j.4:entityRank>
+        <rdfs:label xml:lang="de">Vereinigtes Deutschland</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://de.dbpedia.org/resource/Deutschland"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:enhancement-8da6b246-3a5b-a085-f41e-42dd536f9007">
+        <j.10:confidence rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.9488917991708126</j.10:confidence>
+        <j.10:end rdf:datatype="http://www.w3.org/2001/XMLSchema#int">40</j.10:end>
+        <j.10:extracted-from rdf:resource="urn:content-item-sha1-223476fd31a6ec63a204237d220457292e09cb78"/>
+        <j.10:selected-text xml:lang="de">FDP</j.10:selected-text>
+        <j.10:selection-context xml:lang="de">Die Freie Demokratische Partei (kurz FDP, Eigenbezeichnung: Freie Demokraten) ist eine liberale Partei in Deutschland. Sie war 1949–1956, 1961–1966 ...</j.10:selection-context>
+        <j.10:start rdf:datatype="http://www.w3.org/2001/XMLSchema#int">37</j.10:start>
+        <j.5:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2015-08-05T18:37:58.398Z</j.5:created>
+        <j.5:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">org.apache.stanbol.enhancer.engines.opennlp.impl.CustomNERModelEnhancementEngine</j.5:creator>
+        <j.5:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdf:type rdf:resource="http://fise.iks-project.eu/ontology/Enhancement"/>
+        <rdf:type rdf:resource="http://fise.iks-project.eu/ontology/TextAnnotation"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:enhancement-0f2e593b-8128-ec94-8ada-2216b54b5ef4">
+        <j.10:confidence rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.3999999937371059</j.10:confidence>
+        <j.10:entity-label xml:lang="de">F.D.P.</j.10:entity-label>
+        <j.10:entity-reference rdf:resource="http://de.dbpedia.org/resource/F.D.P."/>
+        <j.10:extracted-from rdf:resource="urn:content-item-sha1-223476fd31a6ec63a204237d220457292e09cb78"/>
+        <j.5:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2015-08-05T18:37:58.405Z</j.5:created>
+        <j.5:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">org.apache.stanbol.enhancer.engines.entitytagging.impl.NamedEntityTaggingEngine</j.5:creator>
+        <j.5:relation rdf:resource="urn:enhancement-8da6b246-3a5b-a085-f41e-42dd536f9007"/>
+        <j.4:site>dedbpedia</j.4:site>
+        <rdf:type rdf:resource="http://fise.iks-project.eu/ontology/Enhancement"/>
+        <rdf:type rdf:resource="http://fise.iks-project.eu/ontology/EntityAnnotation"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:enhancement-b50f6c2c-9505-26c5-fe51-6e45d0f48ec6">
+        <j.10:confidence rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.9999960937378959</j.10:confidence>
+        <j.10:extracted-from rdf:resource="urn:content-item-sha1-223476fd31a6ec63a204237d220457292e09cb78"/>
+        <j.5:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2015-08-05T18:37:58.379Z</j.5:created>
+        <j.5:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">org.apache.stanbol.enhancer.engines.langdetect.LanguageDetectionEnhancementEngine</j.5:creator>
+        <j.5:language>de</j.5:language>
+        <j.5:type rdf:resource="http://purl.org/dc/terms/LinguisticSystem"/>
+        <rdf:type rdf:resource="http://fise.iks-project.eu/ontology/Enhancement"/>
+        <rdf:type rdf:resource="http://fise.iks-project.eu/ontology/TextAnnotation"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:enhancement-517b55f9-5e2c-cde4-ed96-255a4a04b887">
+        <j.10:confidence rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.0</j.10:confidence>
+        <j.10:entity-label xml:lang="de">Deutschland</j.10:entity-label>
+        <j.10:entity-reference rdf:resource="http://de.dbpedia.org/resource/Deutschland"/>
+        <j.10:entity-type rdf:resource="http://dbpedia.org/ontology/Country"/>
+        <j.10:entity-type rdf:resource="http://dbpedia.org/ontology/Place"/>
+        <j.10:entity-type rdf:resource="http://dbpedia.org/ontology/PopulatedPlace"/>
+        <j.10:entity-type rdf:resource="http://dbpedia.org/ontology/Wikidata:Q532"/>
+        <j.10:entity-type rdf:resource="http://schema.org/Country"/>
+        <j.10:entity-type rdf:resource="http://schema.org/Place"/>
+        <j.10:entity-type rdf:resource="http://www.ontologydesignpatterns.org/ont/d0.owl#Location"/>
+        <j.10:entity-type rdf:resource="http://www.opengis.net/gml/_Feature"/>
+        <j.10:extracted-from rdf:resource="urn:content-item-sha1-223476fd31a6ec63a204237d220457292e09cb78"/>
+        <j.5:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2015-08-05T18:37:58.406Z</j.5:created>
+        <j.5:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">org.apache.stanbol.enhancer.engines.entitytagging.impl.NamedEntityTaggingEngine</j.5:creator>
+        <j.5:relation rdf:resource="urn:enhancement-28cede35-405a-8f07-e988-155ba1eb7919"/>
+        <j.4:site>dedbpedia</j.4:site>
+        <rdf:type rdf:resource="http://fise.iks-project.eu/ontology/Enhancement"/>
+        <rdf:type rdf:resource="http://fise.iks-project.eu/ontology/EntityAnnotation"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://de.dbpedia.org/resource/FDP_Bayern">
+        <j.2:abstract xml:lang="de">Die FDP Bayern ist der Landesverband der Freien Demokratischen Partei in Bayern. Der Landesverband hatte im Januar 2012 5.700 Mitglieder. Er wurde in Bayern 1946 gegründet.↑ [1], abgerufen am 25. November 2013</j.2:abstract>
+        <j.5:subject rdf:resource="http://de.dbpedia.org/resource/Kategorie:Gegründet_1946"/>
+        <j.5:subject rdf:resource="http://de.dbpedia.org/resource/Kategorie:Landesverband_der_FDP"/>
+        <j.5:subject rdf:resource="http://de.dbpedia.org/resource/Kategorie:Organisation_(München)"/>
+        <j.5:subject rdf:resource="http://de.dbpedia.org/resource/Kategorie:Partei_in_Bayern"/>
+        <j.4:entityRank rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.47863555</j.4:entityRank>
+        <rdfs:label xml:lang="de">FDP Bayern</rdfs:label>
+        <j.8:subject rdf:resource="http://de.dbpedia.org/resource/Kategorie:Gegründet_1946"/>
+        <j.8:subject rdf:resource="http://de.dbpedia.org/resource/Kategorie:Landesverband_der_FDP"/>
+        <j.8:subject rdf:resource="http://de.dbpedia.org/resource/Kategorie:Organisation_(München)"/>
+        <j.8:subject rdf:resource="http://de.dbpedia.org/resource/Kategorie:Partei_in_Bayern"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://de.dbpedia.org/resource/FDP_Deutschland">
+        <j.2:wikiPageRedirects rdf:resource="http://de.dbpedia.org/resource/Freie_Demokratische_Partei"/>
+        <j.4:entityRank rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.68423223</j.4:entityRank>
+        <rdfs:label xml:lang="de">FDP Deutschland</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://de.dbpedia.org/resource/Freie_Demokratische_Partei"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:enhancement-3b65ac94-59a7-8cd2-2a8e-5fe2a9a1f8ad">
+        <j.10:confidence rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.23999999624226356</j.10:confidence>
+        <j.10:entity-label xml:lang="de">FDP Bayern</j.10:entity-label>
+        <j.10:entity-reference rdf:resource="http://de.dbpedia.org/resource/FDP_Bayern"/>
+        <j.10:extracted-from rdf:resource="urn:content-item-sha1-223476fd31a6ec63a204237d220457292e09cb78"/>
+        <j.5:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2015-08-05T18:37:58.406Z</j.5:created>
+        <j.5:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">org.apache.stanbol.enhancer.engines.entitytagging.impl.NamedEntityTaggingEngine</j.5:creator>
+        <j.5:relation rdf:resource="urn:enhancement-8da6b246-3a5b-a085-f41e-42dd536f9007"/>
+        <j.4:site>dedbpedia</j.4:site>
+        <rdf:type rdf:resource="http://fise.iks-project.eu/ontology/Enhancement"/>
+        <rdf:type rdf:resource="http://fise.iks-project.eu/ontology/EntityAnnotation"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:enhancement-c1a0e28d-64cd-d111-e739-bfd8e5c2dde6">
+        <j.10:confidence rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.19999999999999996</j.10:confidence>
+        <j.10:entity-label xml:lang="de">FDP Deutschland</j.10:entity-label>
+        <j.10:entity-reference rdf:resource="http://de.dbpedia.org/resource/FDP_Deutschland"/>
+        <j.10:extracted-from rdf:resource="urn:content-item-sha1-223476fd31a6ec63a204237d220457292e09cb78"/>
+        <j.5:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2015-08-05T18:37:58.406Z</j.5:created>
+        <j.5:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">org.apache.stanbol.enhancer.engines.entitytagging.impl.NamedEntityTaggingEngine</j.5:creator>
+        <j.5:relation rdf:resource="urn:enhancement-8da6b246-3a5b-a085-f41e-42dd536f9007"/>
+        <j.4:site>dedbpedia</j.4:site>
+        <rdf:type rdf:resource="http://fise.iks-project.eu/ontology/Enhancement"/>
+        <rdf:type rdf:resource="http://fise.iks-project.eu/ontology/EntityAnnotation"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://de.dbpedia.org/resource/F.D.P.">
+        <j.2:wikiPageRedirects rdf:resource="http://de.dbpedia.org/resource/Freie_Demokratische_Partei"/>
+        <j.4:entityRank rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.68423223</j.4:entityRank>
+        <rdfs:label xml:lang="de">F.D.P.</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://de.dbpedia.org/resource/Freie_Demokratische_Partei"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:enhancement-28cede35-405a-8f07-e988-155ba1eb7919">
+        <j.10:confidence rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.8498788199167966</j.10:confidence>
+        <j.10:end rdf:datatype="http://www.w3.org/2001/XMLSchema#int">117</j.10:end>
+        <j.10:extracted-from rdf:resource="urn:content-item-sha1-223476fd31a6ec63a204237d220457292e09cb78"/>
+        <j.10:selected-text xml:lang="de">Deutschland</j.10:selected-text>
+        <j.10:selection-context xml:lang="de">Die Freie Demokratische Partei (kurz FDP, Eigenbezeichnung: Freie Demokraten) ist eine liberale Partei in Deutschland. Sie war 1949–1956, 1961–1966 ...</j.10:selection-context>
+        <j.10:start rdf:datatype="http://www.w3.org/2001/XMLSchema#int">106</j.10:start>
+        <j.5:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2015-08-05T18:37:58.398Z</j.5:created>
+        <j.5:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">org.apache.stanbol.enhancer.engines.opennlp.impl.CustomNERModelEnhancementEngine</j.5:creator>
+        <j.5:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdf:type rdf:resource="http://fise.iks-project.eu/ontology/Enhancement"/>
+        <rdf:type rdf:resource="http://fise.iks-project.eu/ontology/TextAnnotation"/>
+    </rdf:Description>
+</rdf:RDF>

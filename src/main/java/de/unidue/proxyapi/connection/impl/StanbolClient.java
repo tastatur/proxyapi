@@ -1,10 +1,10 @@
 package de.unidue.proxyapi.connection.impl;
 
-import com.hp.hpl.jena.rdf.model.Model;
-import com.hp.hpl.jena.rdf.model.ModelFactory;
 import de.unidue.proxyapi.connection.EnhancementClient;
 import de.unidue.proxyapi.data.entities.Entity;
 import de.unidue.proxyapi.util.EnhancementEngine;
+import de.unidue.proxyapi.util.EntitiesExtractorAnswerConverter;
+import de.unidue.proxyapi.util.impl.StanbolAnswerConverter;
 import org.apache.http.Header;
 import org.apache.http.HttpEntity;
 import org.apache.http.client.methods.CloseableHttpResponse;
@@ -18,7 +18,6 @@ import org.apache.http.message.BasicHeader;
 import org.apache.http.protocol.HttpContext;
 
 import java.io.IOException;
-import java.io.InputStream;
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.List;
@@ -31,6 +30,7 @@ public final class StanbolClient implements EnhancementClient {
     private static StanbolClient instance;
 
     private final String baseUrl;
+    private final EntitiesExtractorAnswerConverter stanbolAnswerConverter = new StanbolAnswerConverter();
     private CloseableHttpClient httpClient;
 
     private StanbolClient(final String serverAddress) {
@@ -76,7 +76,7 @@ public final class StanbolClient implements EnhancementClient {
         final HttpPost enhancementRequest = generatePostRequest(snippet, engine);
         try (CloseableHttpResponse stanbolResponse = this.httpClient.execute(enhancementRequest, httpContext)) {
             HttpEntity responseBody = stanbolResponse.getEntity();
-            foundEntities = convertRawStanbolAnswer(responseBody.getContent());
+            foundEntities = stanbolAnswerConverter.convertExtractorAnswer(responseBody.getContent());
         } catch (IOException e) {
             e.printStackTrace();
             getLogger().error("Kann die Suchergebnisse nicht anreichern!", e);
@@ -93,11 +93,5 @@ public final class StanbolClient implements EnhancementClient {
             getLogger().error("Kann die Suchergebnisse nicht anreichern!", e);
         }
         return enhancementRequest;
-    }
-
-    private List<Entity> convertRawStanbolAnswer(final InputStream content) {
-        final Model rawResponseModel = ModelFactory.createDefaultModel();
-        rawResponseModel.read(content, null);
-        return new ArrayList<>();
     }
 }
