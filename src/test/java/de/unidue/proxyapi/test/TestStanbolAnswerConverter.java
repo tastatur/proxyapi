@@ -51,4 +51,10 @@ public class TestStanbolAnswerConverter {
         Assert.assertNotNull(germany.getAbstract());
         Assert.assertEquals(((Country)germany).getPopulationDensity(), new Double(226));
     }
+
+    @Test
+    public void shouldHaveConfidence() throws UnsupportedEncodingException {
+        final List<Entity> entities = stanbolAnswerConverter.convertExtractorAnswer(new ByteArrayInputStream(stanbolTestAnswer.getBytes("UTF-8")));
+        entities.forEach(entity -> Assert.assertNotNull(entity.getConfidence()));
+    }
 }

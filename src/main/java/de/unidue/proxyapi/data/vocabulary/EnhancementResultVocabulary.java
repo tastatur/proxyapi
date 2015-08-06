@@ -16,6 +16,7 @@ public final class EnhancementResultVocabulary {
     public static final Property POPULATION_DENSITY = ResourceFactory.createProperty(DBPEDIA_ONTOLOGY_URI, "populationDensity");
     public static final Property GEO_LAT = ResourceFactory.createProperty(GEO_URI, "lat");
     public static final Property GEO_LONG = ResourceFactory.createProperty(GEO_URI, "long");
+    public static final Property CONFIDENCE = ResourceFactory.createProperty(FISE_URI, "confidence");
 
     private EnhancementResultVocabulary() {
     }

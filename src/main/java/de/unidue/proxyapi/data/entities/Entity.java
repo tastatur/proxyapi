@@ -45,6 +45,10 @@ public class Entity {
         return getSingleEntityPropValueAsString(EnhancementResultVocabulary.ABSTRACT);
     }
 
+    public Double getConfidence() {
+        return getSingleEntityPropValue(EnhancementResultVocabulary.CONFIDENCE).getDouble();
+    }
+
     @Override
     public boolean equals(Object object) {
         return object instanceof Entity && internalRepresentation.getURI().equals(((Entity) object).internalRepresentation.getURI());
