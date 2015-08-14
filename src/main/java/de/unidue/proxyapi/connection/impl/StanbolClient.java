@@ -1,6 +1,5 @@
 package de.unidue.proxyapi.connection.impl;
 
-import de.unidue.proxyapi.connection.EnhancementClient;
 import de.unidue.proxyapi.data.entities.Entity;
 import de.unidue.proxyapi.util.EnhancementEngine;
 import de.unidue.proxyapi.util.EntitiesExtractorAnswerConverter;
@@ -61,7 +60,7 @@ public final class StanbolClient extends AbstractEnhancementClient {
 
     @Override
     public Map<String, List<Entity>> getEntitiesForSnippets(final Map<String, String> snippets) {
-        return getEntitiesForSnippets(snippets, EnhancementEngine.STANFORD);
+        return getEntitiesForSnippets(snippets, EnhancementEngine.STANFORD_BOTH);
     }
 
     @Override
