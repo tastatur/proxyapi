@@ -6,6 +6,7 @@ import de.unidue.proxyapi.util.EntitiesExtractorAnswerConverter;
 import de.unidue.proxyapi.util.impl.StanbolAnswerConverter;
 import org.apache.http.Header;
 import org.apache.http.HttpEntity;
+import org.apache.http.annotation.ThreadSafe;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.client.protocol.HttpClientContext;
@@ -23,6 +24,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
+@ThreadSafe
 public final class StanbolClient extends AbstractEnhancementClient {
 
     private final String baseUrl;
@@ -31,6 +33,7 @@ public final class StanbolClient extends AbstractEnhancementClient {
 
     public StanbolClient(final String serverAddress) {
         this.baseUrl = serverAddress.concat("/enhancer/chain/");
+        init();
     }
 
     private void init() {
