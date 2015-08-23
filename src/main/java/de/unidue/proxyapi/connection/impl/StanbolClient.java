@@ -25,23 +25,12 @@ import java.util.stream.Collectors;
 
 public final class StanbolClient extends AbstractEnhancementClient {
 
-    private static final String STANBOL_ADDRESS_PROP = "de.unidue.stanbol.address";
-    private static StanbolClient instance;
-
     private final String baseUrl;
     private final EntitiesExtractorAnswerConverter stanbolAnswerConverter = new StanbolAnswerConverter();
     private CloseableHttpClient httpClient;
 
-    private StanbolClient(final String serverAddress) {
+    public StanbolClient(final String serverAddress) {
         this.baseUrl = serverAddress.concat("/enhancer/chain/");
-    }
-
-    public static synchronized StanbolClient getInstance() {
-        if (instance == null) {
-            instance = new StanbolClient(System.getProperty(STANBOL_ADDRESS_PROP));
-            instance.init();
-        }
-        return instance;
     }
 
     private void init() {
