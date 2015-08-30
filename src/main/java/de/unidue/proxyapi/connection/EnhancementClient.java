@@ -1,12 +1,10 @@
 package de.unidue.proxyapi.connection;
 
-import de.unidue.proxyapi.data.entities.Entity;
+import de.unidue.proxyapi.data.EnhancementResults;
+import de.unidue.proxyapi.data.SearchSnippets;
 import de.unidue.proxyapi.util.EnhancementEngine;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import java.util.List;
-import java.util.Map;
 
 public interface EnhancementClient {
 
@@ -15,25 +13,13 @@ public interface EnhancementClient {
     }
 
     /**
-     * Suche nach Ontologien in den Suchsnippets und verwende dabei den Default-Engine als Enhancementkette
-     *
-     * @param snippets Suchsnippets, wo nach Entitäten gesuchgt werden soll (Eine Map von URL der Webseite auf den Text des Snippets)
-     * @return Gefundene Ontologien (Map von URL der Webseite zu den auf der seite gefundenen Ontologien)
-     */
-    Map<String, List<Entity>> getEntitiesForSnippets(final Map<String, String> snippets);
-
-    /**
      * Suche nach Ontologien in den Suchsnippets
      *
-     * @param snippets Suchsnippets, wo nach Entitäten gesuchgt werden soll (Eine Map von URL der Webseite auf den Text des Snippets)
-     * @param engine   Die Enginekette, die verwendet werden soll
-     * @return Gefundene Ontologien (Map von URL der Webseite zu den auf der seite gefundenen Ontologien)
+     * @param snippets Die Suchsnippets, die untersucht werden sollen und die Liste von URLs, die von der Suchmaschine gefunden wurden.
+     * Wichtig! Diese API ist keine Schnitstelle zum Bing oder Google, die führt keine Webseitensuche durch, sondern extrahiert die Entitäten
+     * aus den vorher gefundenen Informationen! Bitte benutze die API von Karatassis, falls du eine Bing-API brauchst.
+     * @param engine Die Enginekette, die verwendet werden soll
+     * @return Gefundene Ontologien.
      */
-    Map<String, List<Entity>> getEntitiesForSnippets(final Map<String, String> snippets, final EnhancementEngine engine);
-
-    /**
-     * Filtere die Snippets raus, für die gar keine Entitäten gefunden wurden
-     * @return
-     */
-    Map<String, List<Entity>> filterEmptyResults(final Map<String, List<Entity>> enhancementResults);
+    EnhancementResults getEntitiesForSnippets(final SearchSnippets snippets, final EnhancementEngine engine);
 }

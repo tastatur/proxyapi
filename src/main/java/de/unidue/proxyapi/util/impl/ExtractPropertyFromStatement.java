@@ -1,6 +1,5 @@
 package de.unidue.proxyapi.util.impl;
 
-import com.hp.hpl.jena.rdf.model.Literal;
 import com.hp.hpl.jena.rdf.model.Statement;
 import com.hp.hpl.jena.util.iterator.Map1;
 import de.unidue.proxyapi.data.entities.EntityProperty;

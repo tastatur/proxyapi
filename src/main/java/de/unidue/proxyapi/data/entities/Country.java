@@ -5,15 +5,15 @@ import de.unidue.proxyapi.data.vocabulary.EnhancementResultVocabulary;
 
 public class Country extends Place {
 
-    public Country(Resource internalRepresentation) {
+    public Country(final Resource internalRepresentation) {
         super(internalRepresentation);
     }
 
     public Double getAreaTotal() {
-        return getSingleEntityPropValue(EnhancementResultVocabulary.AREA_TOTAL).getDouble();
+        return getFirstLiteralValue(EnhancementResultVocabulary.AREA_TOTAL).getDouble();
     }
 
     public Double getPopulationDensity() {
-        return getSingleEntityPropValue(EnhancementResultVocabulary.POPULATION_DENSITY).getDouble();
+        return getFirstLiteralValue(EnhancementResultVocabulary.POPULATION_DENSITY).getDouble();
     }
 }

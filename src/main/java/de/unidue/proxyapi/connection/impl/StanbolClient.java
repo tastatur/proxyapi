@@ -1,5 +1,9 @@
 package de.unidue.proxyapi.connection.impl;
 
+import de.unidue.proxyapi.connection.EnhancementClient;
+import de.unidue.proxyapi.data.EnhancementResultEntry;
+import de.unidue.proxyapi.data.EnhancementResults;
+import de.unidue.proxyapi.data.SearchSnippets;
 import de.unidue.proxyapi.data.entities.Entity;
 import de.unidue.proxyapi.util.EnhancementEngine;
 import de.unidue.proxyapi.util.EntitiesExtractorAnswerConverter;
@@ -19,13 +23,12 @@ import org.apache.http.protocol.HttpContext;
 
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
-import java.util.stream.Collectors;
 
 @ThreadSafe
-public final class StanbolClient extends AbstractEnhancementClient {
+public final class StanbolClient implements EnhancementClient {
 
     private final String baseUrl;
     private final EntitiesExtractorAnswerConverter stanbolAnswerConverter = new StanbolAnswerConverter();
@@ -51,14 +54,16 @@ public final class StanbolClient extends AbstractEnhancementClient {
     }
 
     @Override
-    public Map<String, List<Entity>> getEntitiesForSnippets(final Map<String, String> snippets) {
-        return getEntitiesForSnippets(snippets, EnhancementEngine.STANFORD_BOTH);
-    }
+    public EnhancementResults getEntitiesForSnippets(final SearchSnippets snippets, final EnhancementEngine engine) {
+        final EnhancementResults enhancementResults = new EnhancementResults();
+        snippets.getSearchSnippets().parallelStream().map(searchSnippet -> {
+            final URL websiteUrl = searchSnippet.getWebsiteUrl();
+            final String snippetText = searchSnippet.getSnippetText();
 
-    @Override
-    public Map<String, List<Entity>> getEntitiesForSnippets(final Map<String, String> snippets, final EnhancementEngine engine) {
-        return snippets.entrySet().parallelStream()
-                .collect(Collectors.toMap(Map.Entry::getKey, searchEntry -> getEntitiesForSnippet(searchEntry.getValue(), engine)));
+            final List<Entity> entities = getEntitiesForSnippet(snippetText, engine);
+            return new EnhancementResultEntry(snippetText, websiteUrl, entities);
+        }).filter(enhancementResultEntry -> !enhancementResultEntry.getEntities().isEmpty()).forEach(enhancementResults::addEnhancementResult);
+        return enhancementResults;
     }
 
     private List<Entity> getEntitiesForSnippet(final String snippet, final EnhancementEngine engine) {

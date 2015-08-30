@@ -30,27 +30,31 @@ public class Entity {
         return internalRepresentation.listProperties(RDF.type).mapWith(entityTypeArc -> entityTypeArc.getLiteral().getString()).toList();
     }
 
-    public Literal getSingleEntityPropValue(final Property property) {
-        if (internalRepresentation.hasProperty(property)) {
-            return internalRepresentation.getProperty(property).getLiteral();
-        }
-        return ResourceFactory.createPlainLiteral("");
-    }
-
-    public String getSingleEntityPropValueAsString(final Property property) {
-        return getSingleEntityPropValue(property).getString();
-    }
-
     public String getUri() {
         return internalRepresentation.getURI();
     }
 
+    public String getName() {
+        return internalRepresentation.getLocalName();
+    }
+
     public String getAbstract() {
-        return getSingleEntityPropValueAsString(EnhancementResultVocabulary.ABSTRACT);
+        return getFirstLiteralValue(EnhancementResultVocabulary.ABSTRACT).getString();
     }
 
     public Double getConfidence() {
-        return getSingleEntityPropValue(EnhancementResultVocabulary.CONFIDENCE).getDouble();
+        return getFirstLiteralValue(EnhancementResultVocabulary.CONFIDENCE).getDouble();
+    }
+
+    public Double getEntityHubRank() {
+        return getFirstLiteralValue(EnhancementResultVocabulary.ENTITYHUB_RANK).getDouble();
+    }
+
+    protected Literal getFirstLiteralValue(final Property property) {
+        if (internalRepresentation.hasProperty(property)) {
+            return internalRepresentation.getProperty(property).getLiteral();
+        }
+        return ResourceFactory.createPlainLiteral("");
     }
 
     @Override

@@ -8,6 +8,7 @@ public final class EnhancementResultVocabulary {
     public static final String FISE_URI = "http://fise.iks-project.eu/ontology/";
     public static final String DBPEDIA_ONTOLOGY_URI = "http://dbpedia.org/ontology/";
     public static final String GEO_URI = "http://www.w3.org/2003/01/geo/wgs84_pos#";
+    public static final String ENTITYHUB_URI = "http://stanbol.apache.org/ontology/entityhub/entityhub#";
 
     public static final Property ENTITY_REFERENCE = ResourceFactory.createProperty(FISE_URI, "entity-reference");
     public static final Property COUNTRY_TYPE = ResourceFactory.createProperty(DBPEDIA_ONTOLOGY_URI, "Country");
@@ -17,6 +18,8 @@ public final class EnhancementResultVocabulary {
     public static final Property GEO_LAT = ResourceFactory.createProperty(GEO_URI, "lat");
     public static final Property GEO_LONG = ResourceFactory.createProperty(GEO_URI, "long");
     public static final Property CONFIDENCE = ResourceFactory.createProperty(FISE_URI, "confidence");
+    public static final Property INDIVIDUALISED_GND = ResourceFactory.createProperty(DBPEDIA_ONTOLOGY_URI, "individualisedGnd");
+    public static final Property ENTITYHUB_RANK = ResourceFactory.createProperty(ENTITYHUB_URI, "entityRank");
 
     private EnhancementResultVocabulary() {
     }
