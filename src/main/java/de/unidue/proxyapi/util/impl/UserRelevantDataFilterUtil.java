@@ -16,6 +16,9 @@ import java.util.stream.Collectors;
  */
 public final class UserRelevantDataFilterUtil {
 
+    private UserRelevantDataFilterUtil() {
+    }
+
     /**
      * Filtere alle für den Benutzer irrelevante Daten und die Entitäten ohne Parameter raus.
      *

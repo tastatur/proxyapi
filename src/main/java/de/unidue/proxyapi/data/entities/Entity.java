@@ -7,8 +7,10 @@ import com.hp.hpl.jena.rdf.model.ResourceFactory;
 import com.hp.hpl.jena.vocabulary.RDF;
 import de.unidue.proxyapi.data.AcceptAllFilter;
 import de.unidue.proxyapi.data.vocabulary.EnhancementResultVocabulary;
+import de.unidue.proxyapi.util.impl.EntityUtils;
 import de.unidue.proxyapi.util.impl.ExtractPropertyFromStatement;
 import com.hp.hpl.jena.util.iterator.Filter;
+import org.apache.commons.lang3.StringUtils;
 
 import java.util.List;
 
@@ -19,6 +21,8 @@ public class Entity {
 
     private final Resource internalRepresentation;
     private Filter<EntityProperty> keepPropsFilter = new AcceptAllFilter();
+
+    private String entityName;
 
     public Entity(final Resource internalRepresentation) {
         this.internalRepresentation = internalRepresentation;
@@ -37,7 +41,10 @@ public class Entity {
     }
 
     public String getName() {
-        return internalRepresentation.getLocalName();
+        if (entityName == null) {
+            entityName = EntityUtils.getNameFromLocalNameOrUri(internalRepresentation.getLocalName(), getUri());
+        }
+        return entityName;
     }
 
     public String getAbstract() {
