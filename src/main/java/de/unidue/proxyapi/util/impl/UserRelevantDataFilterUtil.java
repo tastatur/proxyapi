@@ -1,9 +1,13 @@
 package de.unidue.proxyapi.util.impl;
 
+import com.hp.hpl.jena.util.iterator.Filter;
+import de.unidue.proxyapi.data.EnhancementResultEntry;
+import de.unidue.proxyapi.data.EnhancementResults;
+import de.unidue.proxyapi.data.entities.Entity;
 import de.unidue.proxyapi.data.entities.EntityProperty;
 
+import java.net.URL;
 import java.util.List;
-import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 /**
@@ -13,13 +17,28 @@ import java.util.stream.Collectors;
 public final class UserRelevantDataFilterUtil {
 
     /**
-     * Filtere alle für den Benutzer irrelevante Daten raus.
+     * Filtere alle für den Benutzer irrelevante Daten und die Entitäten ohne Parameter raus.
      *
-     * @param props             Ursprüngliuche Eigenschaften
-     * @param propertyPredicate Prädikat, der entscheidet, was relevant uns was nicht ist.
+     * @param oldEnhancementResults Ursprüngliuche Anreicherungen
+     * @param propertyPredicate     Prädikat, der entscheidet, was relevant uns was nicht ist.
      * @return Für den Benutzer relevante Eigenschaften
      */
-    public static List<EntityProperty> filterProps(final List<EntityProperty> props, final Predicate<EntityProperty> propertyPredicate) {
-        return props.parallelStream().filter(propertyPredicate).collect(Collectors.toList());
+    public static EnhancementResults filterProps(final EnhancementResults oldEnhancementResults, final Filter<EntityProperty> propertyPredicate) {
+        final EnhancementResults newEnhancementResults = new EnhancementResults();
+        oldEnhancementResults.getEnhancementResults().parallelStream()
+                .forEach(enhancementResultEntry -> enhancementResultEntry.getEntities()
+                        .forEach(entity -> entity.setKeepPropsFilter(propertyPredicate)));
+
+        oldEnhancementResults.getEnhancementResults().forEach(enhancementResultEntry -> {
+            final String snippet = enhancementResultEntry.getSnippetText();
+            final URL website = enhancementResultEntry.getSnippetAddress();
+            final List<Entity> entities = enhancementResultEntry.getEntities().parallelStream().filter(entity -> !entity.getAllProperties().isEmpty())
+                    .collect(Collectors.toList());
+            if (!entities.isEmpty()) {
+                newEnhancementResults.addEnhancementResult(new EnhancementResultEntry(snippet, website, entities));
+            }
+        });
+
+        return newEnhancementResults;
     }
 }

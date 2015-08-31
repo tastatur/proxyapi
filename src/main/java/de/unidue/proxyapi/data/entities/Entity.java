@@ -5,8 +5,10 @@ import com.hp.hpl.jena.rdf.model.Property;
 import com.hp.hpl.jena.rdf.model.Resource;
 import com.hp.hpl.jena.rdf.model.ResourceFactory;
 import com.hp.hpl.jena.vocabulary.RDF;
+import de.unidue.proxyapi.data.AcceptAllFilter;
 import de.unidue.proxyapi.data.vocabulary.EnhancementResultVocabulary;
 import de.unidue.proxyapi.util.impl.ExtractPropertyFromStatement;
+import com.hp.hpl.jena.util.iterator.Filter;
 
 import java.util.List;
 
@@ -16,13 +18,14 @@ import java.util.List;
 public class Entity {
 
     private final Resource internalRepresentation;
+    private Filter<EntityProperty> keepPropsFilter = new AcceptAllFilter();
 
     public Entity(final Resource internalRepresentation) {
         this.internalRepresentation = internalRepresentation;
     }
 
     public List<EntityProperty> getAllProperties() {
-        return internalRepresentation.listProperties().mapWith(new ExtractPropertyFromStatement()).toList();
+        return internalRepresentation.listProperties().mapWith(new ExtractPropertyFromStatement()).filterKeep(keepPropsFilter).toList();
     }
 
     public List<String> getEntityTypes() {
@@ -47,6 +50,10 @@ public class Entity {
 
     public Double getEntityHubRank() {
         return getFirstLiteralValue(EnhancementResultVocabulary.ENTITYHUB_RANK).getDouble();
+    }
+
+    public void setKeepPropsFilter(final Filter<EntityProperty> keepPropsFilter) {
+        this.keepPropsFilter = keepPropsFilter;
     }
 
     protected Literal getFirstLiteralValue(final Property property) {
