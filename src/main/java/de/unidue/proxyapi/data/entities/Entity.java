@@ -6,7 +6,6 @@ import com.hp.hpl.jena.rdf.model.Resource;
 import com.hp.hpl.jena.rdf.model.ResourceFactory;
 import com.hp.hpl.jena.vocabulary.RDF;
 import de.unidue.proxyapi.data.vocabulary.EnhancementResultVocabulary;
-import de.unidue.proxyapi.util.impl.AllInteressantPropsFilter;
 import de.unidue.proxyapi.util.impl.ExtractPropertyFromStatement;
 
 import java.util.List;
@@ -23,7 +22,7 @@ public class Entity {
     }
 
     public List<EntityProperty> getAllProperties() {
-        return internalRepresentation.listProperties().filterKeep(new AllInteressantPropsFilter()).mapWith(new ExtractPropertyFromStatement()).toList();
+        return internalRepresentation.listProperties().mapWith(new ExtractPropertyFromStatement()).toList();
     }
 
     public List<String> getEntityTypes() {

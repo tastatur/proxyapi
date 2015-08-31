@@ -11,11 +11,11 @@ public class ExtractPropertyFromStatement implements Map1<Statement, EntityPrope
         final EntityProperty entityProperty = new EntityProperty();
         entityProperty.setUri(statement.getPredicate().getURI());
 
+        entityProperty.setName(statement.getPredicate().getLocalName());
         if (statement.getObject().isLiteral()) {
             entityProperty.setValue(statement.getLiteral().getString());
             entityProperty.setLang(statement.getLiteral().getLanguage());
             entityProperty.setTypeUri(statement.getLiteral().getDatatypeURI());
-            entityProperty.setName(statement.getPredicate().getLocalName());
         } else {
             entityProperty.setValue(statement.getResource().getURI());
             entityProperty.setExternalResourceLink(true);
