@@ -10,8 +10,8 @@ public class ExtractPropertyFromStatement implements Map1<Statement, EntityPrope
     public EntityProperty map1(Statement statement) {
         final EntityProperty entityProperty = new EntityProperty();
         entityProperty.setUri(statement.getPredicate().getURI());
-
         entityProperty.setName(statement.getPredicate().getLocalName());
+
         if (statement.getObject().isLiteral()) {
             entityProperty.setValue(statement.getLiteral().getString());
             entityProperty.setLang(statement.getLiteral().getLanguage());
